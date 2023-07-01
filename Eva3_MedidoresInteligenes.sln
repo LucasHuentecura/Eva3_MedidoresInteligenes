@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33723.286
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eva3_MedidoresInteligenes", "Eva3_MedidoresInteligenes\Eva3_MedidoresInteligenes.csproj", "{634E71C5-2118-4693-B5C5-48F03F784EE2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MedidoresModel", "MedidoresModel\MedidoresModel.csproj", "{CD1E2251-138A-494E-8B2F-EDA381DE0044}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{634E71C5-2118-4693-B5C5-48F03F784EE2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{634E71C5-2118-4693-B5C5-48F03F784EE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{634E71C5-2118-4693-B5C5-48F03F784EE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{634E71C5-2118-4693-B5C5-48F03F784EE2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD1E2251-138A-494E-8B2F-EDA381DE0044}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD1E2251-138A-494E-8B2F-EDA381DE0044}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD1E2251-138A-494E-8B2F-EDA381DE0044}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD1E2251-138A-494E-8B2F-EDA381DE0044}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C99F62F7-4E88-4FB9-A71B-446A886763E6}
+	EndGlobalSection
+EndGlobal
