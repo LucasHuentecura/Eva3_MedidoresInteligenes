@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MedidoresModel.DAL
 {
-    public class LecturasDALObjeto : ILectura
+    public class LecturasDALObjeto : ILecturaDAL
     {
         private static List<Lectura> lecturas = new List<Lectura>();    // Lista de lecturas
 

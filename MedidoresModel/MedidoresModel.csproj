@@ -41,12 +41,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DAL\ILectura.cs" />
+    <Compile Include="DAL\ILecturaDAL.cs" />
     <Compile Include="DAL\IMedidorDAL.cs" />
     <Compile Include="DAL\LecturasDALObjeto.cs" />
     <Compile Include="DAL\MedidoresDALObjeto.cs" />
+    <Compile Include="DAL\ITipoMedidorDAL.cs" />
+    <Compile Include="DAL\TipoMedidorDALObjeto.cs" />
     <Compile Include="DTO\Lectura.cs" />
     <Compile Include="DTO\Medidor.cs" />
+    <Compile Include="DTO\TipoMedidor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

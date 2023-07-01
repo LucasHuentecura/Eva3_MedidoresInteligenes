@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MedidoresModel.DAL
 {
-    public interface ILectura
+    public interface ILecturaDAL
     {
         List<Lectura> ObtenerLecturas();    // Interfaz encargada de devolver la lista de Lecturas
 
