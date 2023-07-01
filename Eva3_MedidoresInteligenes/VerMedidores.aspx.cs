@@ -1,5 +1,6 @@
 ﻿using MedidoresModel;
 using MedidoresModel.DAL;
+using MedidoresModel.DTO;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,6 +13,7 @@ namespace Eva3_MedidoresInteligenes
     public partial class VerMedidores : System.Web.UI.Page
     {
         private IMedidorDAL medidorDAL = new MedidoresDALObjeto();
+        private ITipoMedidorDAL tipoMedidorDAL = new TipoMedidorDALObjeto();
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -30,12 +32,17 @@ namespace Eva3_MedidoresInteligenes
 
         protected void GridView1_RowCommand(object sender, GridViewCommandEventArgs e)
         {
-            if (e.CommandName == "ingresarLectura")
-            {
-                string serialNumber = Convert.ToString(e.CommandArgument);
 
-                Medidor medidor = medidorDAL.ObtenerMedidores().Find(m => m.SerialNumber == serialNumber);
-            }
         } // End GridView1_RowCommand
+
+        protected void ingresarLectura_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("IngresarLectura.aspx");
+        }
+
+        protected void ingreseMedidor_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Default.aspx");
+        }
     }
 }

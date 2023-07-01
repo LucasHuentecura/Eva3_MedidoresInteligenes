@@ -11,11 +11,11 @@ namespace MedidoresModel
         private DateTime readingDate;
         private int hour;
         private int minutes;
-        private int consume;
+        private double consume;
 
         public DateTime ReadingDate { get => readingDate; set => readingDate = value; }
         public int Hour { get => hour; set => hour = value; }
         public int Minutes { get => minutes; set => minutes = value; }
-        public int Consume { get => consume; set => consume = value; }
+        public double Consume { get => consume; set => consume = value; }
     }
 }

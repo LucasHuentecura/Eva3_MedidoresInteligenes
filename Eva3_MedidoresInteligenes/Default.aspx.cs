@@ -23,16 +23,17 @@ namespace Eva3_MedidoresInteligenes
                 List<TipoMedidor> tipoMedidores = tipoMedidorDAL.getMedidores();
                 this.typeList.DataSource = tipoMedidores;
                 this.typeList.DataTextField = "typeTxt";
-                this.typeList.DataValueField = "idType";
+                this.typeList.DataValueField = "typeTxt";
                 this.typeList.DataBind();
             } // End if
         } // End Page_Load
 
         protected void agregarBtn_Click(object sender, EventArgs e)
         {
+            if (!validateData()) return;
             // Obtener datos del formulario
             string serialNumber = this.serialNumberTxt.Text.Trim();    // Número de série
-            int type = (int)Convert.ToUInt32(this.typeList.SelectedItem.Value);    // Id del tipo de medidor
+            string type = this.typeList.SelectedValue;
 
             // Crear el Objeto Medidor
             Medidor medidor = new Medidor()
@@ -44,12 +45,27 @@ namespace Eva3_MedidoresInteligenes
             // Llamar al DAL 
             medidorDAL.AgregarMedidores(medidor);
 
-            // Mostrar mensaje
-            this.mensajesLbl.Text = "Medidor Guardado Correctamente";
-
             // Redireccionar
             Response.Redirect("VerMedidores.aspx");
 
         } // End agregarBtn_Click
+
+        private bool validateData()
+        {
+            // Validar Número de Série
+            if (this.serialNumberTxt.Text == "")
+            {
+                this.mensajesLbl.Text = "Ingrese un número de Série";
+                return false;
+            }
+
+            // Validar tipo de medidor
+            if (typeList.SelectedValue.Equals("Seleccione una opción"))
+            {
+                this.mensajesLbl.Text = "Seleccione el tipo de medidor";
+                return false;
+            }
+            return true;
+        }
     }
 }

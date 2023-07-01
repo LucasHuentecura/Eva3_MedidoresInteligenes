@@ -68,16 +68,25 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Default.aspx" />
+    <Content Include="IngresarLectura.aspx" />
     <Content Include="VerMedidores.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ArrayList.cs" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IngresarLectura.aspx.cs">
+      <DependentUpon>IngresarLectura.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IngresarLectura.aspx.designer.cs">
+      <DependentUpon>IngresarLectura.aspx</DependentUpon>
     </Compile>
     <Compile Include="PrincipalMaster.Master.cs">
       <DependentUpon>PrincipalMaster.Master</DependentUpon>

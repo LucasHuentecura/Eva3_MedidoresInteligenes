@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MedidoresModel.DTO;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,11 +10,11 @@ namespace MedidoresModel
     public class Medidor
     {
         private string serialNumber;
-        private int type;
-        private List<Lectura> lectura;
+        private string type;
+        private Lectura lectura;
 
         public string SerialNumber { get => serialNumber; set => serialNumber = value; }
-        public int Type { get => type; set => type = value; }
-        public List<Lectura> Lectura1 { get => lectura; set => lectura = value; }
+        public string Type { get => type; set => type = value; }
+        public Lectura Lectura { get => lectura; set => lectura = value; }
     }
 }

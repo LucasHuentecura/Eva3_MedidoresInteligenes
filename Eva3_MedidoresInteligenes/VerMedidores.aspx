@@ -6,7 +6,7 @@
     <div class="row">
         <div class="col-lg-6 mx-auto">
             <div class="card">
-                <div class="card-header bg-danger text-white">
+                <div class="card-header bg-dark text-white">
                     <h3>Medidores</h3>
                 </div>
                 <div class="card-body">
@@ -14,14 +14,14 @@
                         <Columns>
                             <asp:BoundField DataField="serialNumber" HeaderText="Número de Série" />
                             <asp:BoundField DataField="type" HeaderText="Tipo de medidor" />
-                            <asp:TemplateField>
-                                <ItemTemplate>
-                                    <asp:Button CommandName="ingresarLectura" CommandArgument='<%# Eval("serialNumber") %>' runat="server" CssClass="btn btn-danger" Text="Ingresar Lectura" />
-                                </ItemTemplate>
-                            </asp:TemplateField>
+                            <asp:BoundField DataField="Lectura.Consume" HeaderText="Consumo" />
                         </Columns>
                     </asp:GridView>
                 </div>
+            </div>
+            <div class="text-center">
+                <asp:Button runat="server" ID="ingreseMedidor" OnClick="ingreseMedidor_Click" CssClass="btn btn-dark btn-lg" Text="Ingresar Medidor" />
+                <asp:Button runat="server" ID="ingresarLectura" OnClick="ingresarLectura_Click" CssClass="btn btn-dark btn-lg" Text="Ingresar Lectura" />
             </div>
         </div>
     </div>
